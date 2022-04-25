@@ -22,3 +22,14 @@ The source code is available [here](https://bitbucket.org/bibsonomy/bibsonomy).
 [DenseWeight](https://www.github.com/SteiMi/denseweight) is a python package that provides a method for dealing with imbalanced regression tasks.
 The corresponding paper "Density-based weighting for imbalanced regression" is available [here](https://dx.doi.org/10.1007/s10994-021-06023-5).
 
+### Emote-Controlled
+[Code and data](https://github.com/LSX-UniWue/emote-controlled) for "Emote-Controlled: Obtaining Implicit Viewer Feedback through Emote based Sentiment Analysis on Comments of Popular Twitch.tv Channels"
+
+### Where To Submit?
+The [code and data](https://github.com/LSX-UniWue/wts) of our paper "Where to Submit? Helping Researchers to Choose the Right Venue". An interactive web demo can be found under [wheretosubmit.ml](https://wheretosubmit.ml).
+
+### SimLoss
+A [PyTorch implementation](https://github.com/LSX-UniWue/SimLoss) of our proposed loss function from the paper "SimLoss: Class Similarities in Cross Entropy"
+
+### Do Different Deep Metric Learning Losses Lead to Similar Learned Features?
+[Code and data](https://github.com/LSX-UniWue/DML-analysis) for our ICCV 2021 paper "Do Different Deep Metric Learning Losses Lead to Similar Learned Features?"
