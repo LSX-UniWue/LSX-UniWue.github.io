@@ -13,6 +13,8 @@ Our organization is currently present at:
 
 ## Projects
 
+<div id="projects"></div>
+
 ### BibSonomy
 [BibSonomy](https://www.bibsonomy.org/) is a social bookmarking system as well as the underlying technical platform.
 BibSonomy is run and developed by the Data Science Chair in cooperation with the [KDE group](https://www.kde.cs.uni-kassel.de/) of the University of Kassel, and the [L3S Research Center](https://www.l3s.de), Germany.
@@ -33,3 +35,14 @@ A [PyTorch implementation](https://github.com/LSX-UniWue/SimLoss) of our propose
 
 ### Do Different Deep Metric Learning Losses Lead to Similar Learned Features?
 [Code and data](https://github.com/LSX-UniWue/DML-analysis) for our ICCV 2021 paper "Do Different Deep Metric Learning Losses Lead to Similar Learned Features?"
+
+
+<script>
+  const projects = document.getElementById("projects");
+  
+  fetch("https://api.github.com/users/LSX-UniWue/repos").then(data => data.json()).then(json => {
+    for(repo in json){
+      projects.innerHtml += "<h3><a href='" + repo.html_url + "'>" + repo.name + "</a></h3><p>" + repo.description + "</p>";
+    }
+  });
+</script>
