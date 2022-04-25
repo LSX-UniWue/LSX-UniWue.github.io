@@ -40,9 +40,12 @@ A [PyTorch implementation](https://github.com/LSX-UniWue/SimLoss) of our propose
 <script>
   const projects = document.getElementById("projects");
   
+  let htmlString = "";
   fetch("https://api.github.com/users/LSX-UniWue/repos").then(data => data.json()).then(json => {
-    for(repo in json){
-      projects.innerHtml += "<h3><a href='" + repo.html_url + "'>" + repo.name + "</a></h3><p>" + repo.description + "</p>";
+    for(repo of json){
+      htmlString += "<h3><a href='" + repo.html_url + "'>" + repo.name + "</a></h3><p>" + repo.description + "</p>";
     }
+  
+    projects.innerHtml = htmlString;
   });
 </script>
