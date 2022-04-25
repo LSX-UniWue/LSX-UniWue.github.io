@@ -15,37 +15,15 @@ Our organization is currently present at:
 
 <div id="projects-list"></div>
 
-### BibSonomy
-[BibSonomy](https://www.bibsonomy.org/) is a social bookmarking system as well as the underlying technical platform.
-BibSonomy is run and developed by the Data Science Chair in cooperation with the [KDE group](https://www.kde.cs.uni-kassel.de/) of the University of Kassel, and the [L3S Research Center](https://www.l3s.de), Germany.
-The source code is available [here](https://bitbucket.org/bibsonomy/bibsonomy).
-
-### DenseWeight
-[DenseWeight](https://www.github.com/SteiMi/denseweight) is a python package that provides a method for dealing with imbalanced regression tasks.
-The corresponding paper "Density-based weighting for imbalanced regression" is available [here](https://dx.doi.org/10.1007/s10994-021-06023-5).
-
-### Emote-Controlled
-[Code and data](https://github.com/LSX-UniWue/emote-controlled) for "Emote-Controlled: Obtaining Implicit Viewer Feedback through Emote based Sentiment Analysis on Comments of Popular Twitch.tv Channels"
-
-### Where To Submit?
-The [code and data](https://github.com/LSX-UniWue/wts) of our paper "Where to Submit? Helping Researchers to Choose the Right Venue". An interactive web demo can be found under [wheretosubmit.ml](https://wheretosubmit.ml).
-
-### SimLoss
-A [PyTorch implementation](https://github.com/LSX-UniWue/SimLoss) of our proposed loss function from the paper "SimLoss: Class Similarities in Cross Entropy"
-
-### Do Different Deep Metric Learning Losses Lead to Similar Learned Features?
-[Code and data](https://github.com/LSX-UniWue/DML-analysis) for our ICCV 2021 paper "Do Different Deep Metric Learning Losses Lead to Similar Learned Features?"
-
-
 <script>
   const projects = document.getElementById("projects-list");
   
   let htmlString = "";
   fetch("https://api.github.com/users/LSX-UniWue/repos").then(data => data.json()).then(json => {
-    for(repo of json){
+    for(let repo of json){
       htmlString += "<h3><a href='" + repo.html_url + "'>" + repo.name + "</a></h3><p>" + repo.description + "</p>";
     }
   
-    projects.innerHtml = htmlString;
+    projects.innerHTML = htmlString;
   });
 </script>
