@@ -20,10 +20,19 @@ Our organization is currently present at:
   
   let htmlString = "";
   fetch("https://api.github.com/users/LSX-UniWue/repos").then(data => data.json()).then(json => {
+    // sort array based on name of repo
+    json.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1);
+
+    // create string
     for(let repo of json){
+      if(repo.name == "LSX-UniWue.github.io"){
+        continue
+      }
+  
       htmlString += "<h3><a href='" + repo.html_url + "'>" + repo.name + "</a></h3><p>" + repo.description + "</p>";
     }
-  
+
+    // update html
     projects.innerHTML = htmlString;
   });
 </script>
