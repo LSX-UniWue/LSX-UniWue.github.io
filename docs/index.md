@@ -13,7 +13,7 @@ Our organization is currently present at:
 
 ## Projects
 
-<div id="projects"></div>
+<div id="projects-list"></div>
 
 ### BibSonomy
 [BibSonomy](https://www.bibsonomy.org/) is a social bookmarking system as well as the underlying technical platform.
@@ -38,7 +38,7 @@ A [PyTorch implementation](https://github.com/LSX-UniWue/SimLoss) of our propose
 
 
 <script>
-  const projects = document.getElementById("projects");
+  const projects = document.getElementById("projects-list");
   
   let htmlString = "";
   fetch("https://api.github.com/users/LSX-UniWue/repos").then(data => data.json()).then(json => {
